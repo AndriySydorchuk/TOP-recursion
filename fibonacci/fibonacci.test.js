@@ -1,4 +1,4 @@
-import { fibs } from "./fibonacci";
+import { fibs, fibsRec } from "./fibonacci";
 
 describe("Fibonacci using iteration", () => {
   let input;
@@ -8,7 +8,7 @@ describe("Fibonacci using iteration", () => {
   test("0", () => {
     input = 0;
     actual = fibs(input);
-    expected = [0];
+    expected = [];
 
     expect(actual).toEqual(expected);
   });
@@ -16,7 +16,7 @@ describe("Fibonacci using iteration", () => {
   test("1", () => {
     input = 1;
     actual = fibs(input);
-    expected = [1];
+    expected = [0];
 
     expect(actual).toEqual(expected);
   });

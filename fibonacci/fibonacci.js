@@ -3,8 +3,12 @@ export function fibs(n) {
     return undefined;
   }
 
-  if (n <= 1) {
-    return [n];
+  if (n === 0) {
+    return [];
+  }
+
+  if (n === 1) {
+    return [n - 1];
   }
 
   const result = [0, 1];
