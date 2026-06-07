@@ -2,7 +2,7 @@ export function fibs(n) {
   if (!Number.isInteger(n) || n < 0) return undefined;
 
   if (n === 0) return [];
-  if (n === 1) return [n - 1];
+  if (n === 1) return [0];
 
   const result = [0, 1];
   const resultLen = result.length;
