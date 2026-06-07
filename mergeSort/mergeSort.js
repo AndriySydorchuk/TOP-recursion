@@ -3,13 +3,10 @@ export function mergeSort(arr) {
 
   const midIdx = Math.round(arr.length / 2);
 
-  const left = arr.filter((num, idx) => idx < midIdx);
-  const right = arr.filter((num, idx) => idx >= midIdx);
+  const left = arr.slice(0, midIdx);
+  const right = arr.slice(midIdx);
 
-  const leftSorted = [...mergeSort(left)];
-  const rightSorted = [...mergeSort(right)];
-
-  return merge(leftSorted, rightSorted);
+  return merge(mergeSort(left), mergeSort(right));
 }
 
 function merge(leftArr, rightArr) {
